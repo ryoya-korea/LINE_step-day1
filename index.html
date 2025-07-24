@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
+        
         /* CSSカスタムプロパティで色を定義 */
         :root {
             --color-primary-dark: #2F4F4F; /* Dark Slate Gray for main headings and strong text */
@@ -41,7 +42,7 @@
         }
         @media (max-width: 640px) { /* スマホ向け */
             .container-main {
-                padding: 0 1rem; /* スマホではパディングを狭める */
+                padding: 0 0.8rem; /* スマホではパディングを狭める */
             }
         }
 
@@ -100,7 +101,7 @@
         /* ヒーロータイトルのメイン部分 */
         .hero-title-main {
             /* clamp(最小フォントサイズ, 画面幅に応じた推奨サイズ, 最大フォントサイズ) */
-            font-size: clamp(1.6rem, 5vw, 3.8rem);
+            font-size: clamp(3rem, 5vw, 3.8rem);
             font-weight: 800; /* 太めのウェイト */
             color: var(--color-primary-dark);
             line-height: 1.4;
@@ -119,7 +120,7 @@
 
         /* セクションの見出し */
         .section-heading {
-            font-size: clamp(1.2rem, 3.8vw, 2.8rem);
+            font-size: clamp(1.5rem, 3.8vw, 2.8rem);
             font-weight: 700;
             color: var(--color-primary-dark);
             text-align: center;
@@ -143,7 +144,7 @@
 
         /* 本文のテキスト */
         .body-text {
-            font-size: clamp(0.5rem, 2.6vw, 1.5rem); /* 最小値とvwの係数を調整 */
+            font-size: clamp(0.8rem, 2.6vw, 1.5rem); /* 最小値とvwの係数を調整 */
             line-height: 1.8;
             margin-bottom: 1.2rem; /* マージンを調整 */
             color: var(--color-text-body);
@@ -155,7 +156,7 @@
             border: 1px solid #f0e6dd; /* 優しい境界線 */
             padding: 2rem 1.5rem;
             border-radius: 12px;
-            font-size: clamp(0.65rem, 2.4vw, 1rem);
+            font-size: clamp(0.8rem, 2.4vw, 1rem);
             line-height: 1.9;
             font-family: 'Helvetica', 'Yu Gothic', '游ゴシック体', sans-serif;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -170,11 +171,11 @@
 
         /* 引用ブロック (強調しないテキストに適用されるスタイル) */
         .de-emphasized-text {
-            font-size: clamp(0.5rem, 2.8vw, 1.1rem); /* 最小値とvwの係数を調整 */
+            font-size: clamp(0.75rem, 2.8vw, 1.1rem); /* 最小値とvwの係数を調整 */
             font-weight: 400;
             color: var(--color-text-body);
             text-align: center;
-            padding: 1.5rem 2rem; /* パディングを控えめに */
+            padding: 1rem 1rem; /* パディングを控えめに */
             background-color: rgba(255, 255, 255, 0.7); /* やや透過性のある白 */
             border-radius: 10px;
             margin: 1.5rem auto; /* マージンも控えめに */
@@ -194,7 +195,7 @@
             background-color: #FDF3E9; /* 非常に薄いオレンジ背景 */
             border-radius: 15px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            margin: 3rem 0;
+            margin: 0.5rem 0;
             line-height: 1.6;
             border: 1px solid rgba(192,80,0,0.1); /* 控えめなボーダー */
         }
@@ -211,7 +212,7 @@
         
         /* セクション内のサブ見出し的な役割のテキスト */
         .sub-heading-text {
-            font-size: clamp(0.8rem, 2.5vw, 1.5rem); /* 最小値を調整 */
+            font-size: clamp(1rem, 2.5vw, 1.5rem); /* 最小値を調整 */
             font-weight: 600; /* semibold */
             color: #4A4E69; /* var(--color-text-body) と同じくらいの色 */
             text-align: center;
@@ -225,17 +226,17 @@
             padding: 2.5rem;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* 柔らかい影 */
-            font-size: clamp(0.95rem, 2.2vw, 1.8rem); /* 最小値を調整 */
+            font-size: clamp(1.6rem, 2.2vw, 3rem); /* 最小値を調整 */
             font-weight: 700;
             text-align: center;
-            margin: 3rem auto;
+            margin: 2rem auto;
             max-width: 750px;
             line-height: 1.5;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
             border: 1px solid rgba(255,255,255,0.3);
         }
         .achievement-display .highlight-university {
-            font-size: clamp(1.2rem, 3.5vw, 2.8rem); /* 最小値を調整 */
+            font-size: clamp(1.6rem, 3.5vw, 2.8rem); /* 最小値を調整 */
             line-height: 1.25;
         }
 
@@ -243,14 +244,15 @@
         /* 標準的な箇条書きリスト */
         ul.custom-bullet-list {
             list-style: none;
-            padding-left: 10%;
+            padding-left: 1rem;
             margin-bottom: 2rem;
         }
         ul.custom-bullet-list li {
             position: relative;
-            padding-left:15%; /* 箇条書きアイコンのためのスペース */
-            margin-bottom: 1.2rem;
-            font-size: clamp(0.8rem, 1.5vw, 1.5rem); /* 最小値を調整 */
+            padding-left:1rem; /* 箇条書きアイコンのためのスペース */
+            margin-top: 1.2rem;
+            margin-bottom: 0rem;
+            font-size: clamp(rem, 1.5vw, 1.5rem); /* 最小値を調整 */
             font-weight: 500;
             color: var(--color-text-body);
             line-height: 1.7;
@@ -274,9 +276,9 @@
         }
         ul.checkmark-list li {
             position: relative;
-            padding-left: 2.5rem;
+            padding-left: 1.4rem;
             margin-bottom: 1.2rem;
-            font-size: clamp(0.8rem, 1.5vw, 1.05rem); /* 最小値を調整 */
+            font-size: clamp(0.95rem, 1.5vw, 2rem); /* 最小値を調整 */
             font-weight: 500;
             color: var(--color-text-body);
             line-height: 1.7;
@@ -292,99 +294,6 @@
             position: absolute;
             left: 0;
             top: 2px;
-        }
-
-        /* --- CTA（行動喚起）とフッターのスタイル --- */
-        /* CTAメッセージボックス */
-        .cta-message-box {
-            background-color: #FDFDFD;
-            border-radius: 15px;
-            padding: 3rem;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.07);
-            margin-top: 3.5rem;
-            border: 1px solid rgba(0,0,0,0.03);
-            text-align: center;
-        }
-        @media (max-width: 768px) {
-            .cta-message-box {
-                padding: 2rem 1.5rem;
-                margin-top: 2.5rem;
-            }
-        }
-
-        /* メッセージアイコン */
-        .cta-message-box .message-icon {
-            font-size: clamp(1.8rem, 4vw, 2.5rem); /* 最小値を調整 */
-            color: var(--color-accent-soft);
-            margin-bottom: 1.2rem;
-            display: inline-block;
-        }
-
-        /* CTAテキスト（大） */
-        .cta-text-large {
-            font-size: clamp(0.8rem, 2.5vw, 1.6rem); /* 最小値を調整 */
-            font-weight: 600;
-            color: var(--color-primary-dark);
-            line-height: 1.5;
-            margin-bottom: 1.2rem;
-        }
-        
-        /* 韓国語を通して、あなたが本当にやりたいことを叶える」のテキスト */
-        .cta-text-major {
-            font-size: clamp(1.2rem, 3vw, 2.5rem); /* 最小値を調整 */
-            font-weight: 800; /* extabold */
-            color: #36454F; /* charcoal */
-            line-height: 1.5;
-            margin-bottom: 2rem; /* 少しマージンを調整 */
-            padding: 0.5rem 1rem; /* パディングも調整 */
-        }
-
-        /* CTAテキスト（小） */
-        .cta-text-small {
-            font-size: clamp(0.75rem, 1.2vw, 1rem); /* 最小値を調整 */
-            color: var(--color-text-body);
-            margin-bottom: 1.2rem;
-        }
-
-        /* フッターの注釈 */
-        .footer-note {
-            font-size: clamp(0.85rem, 1.5vw, 1.1rem); /* 最小値を調整 */
-            font-weight: 600;
-            color: var(--color-accent-gentle);
-            margin-bottom: 1rem;
-        }
-
-        /* フッターのCTAボタン */
-        .footer-cta-action {
-            font-size: clamp(0.85rem, 2vw, 1.5rem); /* 最小値を調整 */
-            font-weight: 700;
-            color: var(--color-primary-dark);
-            background-color: #E0E7EB; /* 非常に柔らかいグレーブルーの背景 */
-            padding: 1.2rem 2rem;
-            border-radius: 8px;
-            display: inline-block;
-            margin-top: 1.5rem;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            transition: background-color 0.3s ease; /* ホバー時のアニメーション */
-        }
-        @media (max-width: 768px) {
-            .footer-cta-action {
-                padding: 0.7rem 1.2rem; /* Adjust padding for mobile button */
-                margin-top: 1rem;
-            }
-        }
-
-        /* フッターのコピーライトテキスト */
-        footer p {
-            font-size: clamp(0.7rem, 1vw, 0.875rem); /* 最小値を調整 */
-            line-height: 1.5; /* 行間を調整 */
-        }
-
-        /* 要素を中央寄せするユーティリティ */
-        .mx-auto {
-            margin-left: auto;
-            margin-right: auto;
-        }
     </style>
 </head>
 <body>
@@ -447,14 +356,14 @@
                     何度もやる気は出るのに、<br>続かない。
                 </h2>
                 <p class="body-text mb-4">
-                    「これだ！」と思って教材を買っては、数週間後には手が止まる。
+                    「これだ！」と思って教材を買っては、<br>数週間後には手が止まる。
                 </p>
                 <ul class="custom-bullet-list mb-6">
                     <li>単語は覚えたけど使い方がわからない。</li>
-                    <li>文法は知ってるのに、話そうとすると言葉が出てこない。</li>
+                    <li>文法は知ってるのに、<br>話そうとすると言葉が出てこない。</li>
                 </ul>
                 <p class="body-text mb-6">
-                    気づけば本棚には使いかけの教科書だけが積み上がっていました。
+                    気づけば本棚には使いかけの<br>教科書だけが積み上がっていました。
                 </p>
                 <p class="sub-heading-text">
                     当時の僕の頭の中には、<br>いつもこんな不安がありました。<br>
@@ -486,7 +395,7 @@
                 </ul>
                 <p class="body-text text-center font-medium">
                     そうして少しずつ道が見えてきたとき、<br>
-                    僕の韓国語はようやく<span class="text-highlight-bold">“使えるもの”</span>になっていきました。
+                    僕の韓国語はようやく<br><span class="text-highlight-bold" style="font-size: 1.2rem;">“使えるもの”<br></span>になっていきました。
                 </p>
             </div>
         </section>
@@ -506,14 +415,16 @@
                     「どうせなら本気で韓国で暮らしたい」と思い立ち、
                 </p>
                 <div class="achievement-display">
-                    韓国の名門、<span class="highlight-university">延世大学（SKY）</span>へ<br>正規入学しました。
+                    韓国の名門<br><span class="highlight-university">延世大学（SKY）</span>へ<br>正規入学しました。
                 </div>
-                <p class="body-text mb-6">
+                <p class="body-text text-center mb-6">
                     もちろん、留学準備やTOPIK対策もすべて独学。<br>
                     大学の出願書類もすべて韓国語で対応しました。
                 </p>
                 <p class="body-text text-center font-medium">
-                    だからこそ、自分の言葉で、韓国語で、生きている実感があります。
+                    <span class="text-highlight-bold" style="font-size: 1rem;">
+                        だからこそ自分の言葉で、韓国語で、<br>生きている実感があります。
+                    </span>
                 </p>
             </div>
         </section>
@@ -526,16 +437,16 @@
             <div class="container-main">
                 <h2 class="section-heading">
                     韓国語はゴールじゃない。<br>
-                    あなたの人生を変える“手段”です
+                    あなたの人生を変える<br>“手段”です
                 </h2>
                 <p class="body-text text-center mb-4">
                     私は、韓国語を話せるようになること<br>だけを目指すコーチではありません。
                 </p>
                 <p class="cta-text-major text-center font-extrabold text-gray-700 mb-6 leading-snug p-3">
-                    「韓国語を通して、あなたが本当にやりたいことを叶える」
+                    韓国語を通して、<br>あなたが本当にやりたいことを叶える
                 </p>
                 <p class="body-text text-center mb-4">
-                    そんな視点から、<br>学習や行動に伴走する存在でありたいと思っています。
+                    そんな視点から、学習や行動に<br>伴走する存在でありたいと思っています。
                 </p>
                 <p class="body-text text-center font-bottom mb-6 text-gray-700">
                     たとえば、
@@ -546,6 +457,13 @@
                     <li class="text-left">韓国で働いてみたい</li>
                     <li class="text-left">韓国の大学に挑戦してみたい</li>
                 </ul>
+                <p class="body-text text-center font-bottom mb-6 text-gray-700">
+                    人によってやりたいことは
+                    様々だと思います。<br>
+                    <span class="text-highlight-bold" style="font-size: 1.3rem;">
+                        どんなことであっても
+                    </span>
+                </p>
                 <p class="text-2xl font-bold text-center text-gray-900">
                     あなたの夢を<br>
                     全部、本気で応援します。
@@ -560,23 +478,26 @@
         <section class="section-padding section-bg-primary-light">
             <div class="container-main text-center">
                 <h2 class="section-heading">
-                    さいごに<br>このページを読んでくれたあなたへ
+                    〈さいごに〉<br>このページを<br>読んでくれたあなたへ
                 </h2>
                 
                 <div class="body-text2 text-left ">
-                    <p>あなたは、これまでにたくさんの韓国語アカウントや<br>
+                    <p>あなたは、これまでにたくさんの韓国語アカウントや
                         教材に触れてきたかもしれません。でも、そういった人たちは本当に「韓国語を話せる人」だったでしょうか？</p><br><br>
 
                     <p>そもそも学ぶ側にとって、教える人の韓国語力を正しく見極めるのは簡単ではありません。
-                        だからこそ、私は<br><p class="font-bold">「中途半端な実力の人から学ぶくらいなら、独学のほうがまだマシ」</p>だとすら思っています。</p><br><br>
+                        だからこそ、私は<br><span class="text-highlight-bold" style="font-size: 0.83rem;">
+                「中途半端な実力の人から学ぶくらいなら、独学のほうがまだマシ」</p>だとすら思っています。</span></p><br><br>
 
-                    <p>また、私は<br><p class="font-bold">「韓国語は簡単だ」</p>という言葉が好きではありません。<br>大嫌いです。  <br>
+                    <p>また、私は<br><p><span class="text-highlight-bold" style="font-size: 1rem;">
+                        「韓国語は簡単だ」</span></p>という言葉が好きではありません。<br>大嫌いです。  <br>
                         もしそう言っている人がいるなら、それは勉強不足か、もしくは発信者としての誠実さに欠けているかのどちらかだと思います。</p>
                     <br><br>
-                    <p >言語を学ぶということは、その国の文化や価値観、<br>考え方に触れ、人生の視野を大きく広げるということ。<br>  
-                        だから私は、そんな言語を軽んじるような発言に<br>強い違和感を覚えます。</p>
-                    <p class="font-bold">私は、本気で韓国語に向き合うあなたのために、<br>全身全霊をかけてサポートする覚悟があります。  <br>
-                        この熱量は、他のどんな韓国語の発信者とも<br>比べものにならないと自負しています。</p>
+                    <p >言語を学ぶということは、その国の文化や価値観、考え方に触れ、人生の視野を大きく広げるということ。 
+                        だから私は、そんな言語を軽んじるような発言に強い違和感を覚えます。</p><br><br>
+
+                    <p><span class="text-highlight-bold" style="font-size: 0.8rem;">私は、本気で韓国語に向き合うあなたのために、全身全霊をかけてサポートする覚悟があります。
+                        この熱量は、他のどんな韓国語の発信者とも比べものにならないと自負しています。</span></p>
                 </div>
 
 
@@ -586,12 +507,12 @@
         <section class="section-padding section-bg-secondary-light">
             <div class="container-main">
                 <div class="cta-message-box mx-auto">
-                    <p class="message-icon">✉️</p>
-                    <p class="cta-text-large">
+                    <p class="message-icon text-center">✉️</p>
+                    <p class="text-highlight-bold text-center">
                         もし、今なにか不安や迷いがあるなら<br>
                         気軽にLINEでメッセージを送ってください。
                     </p>
-                    <p class="cta-text-small">
+                    <p class="cta-text-small text-center">
                         どんな小さなことでも構いません。
                     </p>
                     <ul class="custom-bullet-list text-left inline-block mb-4">
@@ -599,9 +520,8 @@
                         <li>韓国語のつまずきポイント</li>
                         <li>留学や韓国生活のこと</li>
                     </ul>
-                    <p class="cta-text-small mt-4">
-                        どんな内容でも、<br>
-                        あなたの悩みに真剣に向き合ってお応えします。
+                    <p class="cta-text-small text-center mt-4">
+                        どんな内容でも、あなたの悩みに<br>真剣に向き合ってお応えします。
                     </p>
                 </div>
             </div>
@@ -609,7 +529,7 @@
 
         <section class="section-padding section-bg-primary-light">
             <div class="container-main text-center">
-                <p class="footer-note mb-4">
+                <p class="footer-note cta-text-large text-highlight-bold mb-4">
                     ✓ 読んでいただきありがとうございました。
                 </p>
                 
@@ -618,7 +538,7 @@
                     もちろん一件一件直接返信させていただきます。
                 </p>
                 <div class="mt-8">
-                    <p class="footer-cta-action">
+                    <p class="footer-cta-action text-highlight-bold">
                         コーチング無料体験をご希望の方は<br>
                         LINEで「無料体験」と送信してください。
                     </p>
